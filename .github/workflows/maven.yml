@@ -38,10 +38,8 @@ jobs:
       run: mvn clean test
     - name: Show Folders
       run: ls
-    - name: Test Report
-      uses: chrismaille/junito@v1.1.3
+    - name: Test Reporter
+      uses: dorny/test-reporter@v1.5.0
       with:
-          filename: target/surefire-reports/junitreports/TEST-tests.DataProviderTests.xml
-          stop_on_failed: true     # stops at any error/failed tests found
-          stop_on_skipped: false   # stops at any skipped test found
- 
+          path: target/surefire-reports/junitreports/TEST-tests.DataProviderTests.xml
+          reporter: java-junit
