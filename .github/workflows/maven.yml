@@ -38,8 +38,10 @@ jobs:
       run: mvn clean test
     - name: Show Folders
       run: ls
-    - name: JUnit Report Action
-      uses: mikepenz/action-junit-report@v3.2.0
+    - name: Test Report
+      uses: chrismaille/junito@v1
       with:
-        report_paths: target/surefire-reports/testng-results.xml
-        
+          filename: target/surefire-reports/testng-results.xml
+          stop_on_failed: true     # stops at any error/failed tests found
+          stop_on_skipped: false   # stops at any skipped test found
+ 
