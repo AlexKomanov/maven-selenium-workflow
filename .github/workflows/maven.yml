@@ -36,6 +36,8 @@ jobs:
     - run: chrome --version
     - name: Test with Maven
       run: mvn clean test
+    - name: Show Folders
+      run: ls
     - name: Test Reporter
       uses: dorny/test-reporter@v1.5.0
       with:
