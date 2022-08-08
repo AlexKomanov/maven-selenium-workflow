@@ -39,7 +39,7 @@ jobs:
     - name: Show Folders
       run: ls
     - name: Test Report
-      uses: chrismaille/junito@v1
+      uses: chrismaille/junito@v1.1.3
       with:
           filename: target/surefire-reports/testng-results.xml
           stop_on_failed: true     # stops at any error/failed tests found
